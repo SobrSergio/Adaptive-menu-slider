@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Меню на JS</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header"> <!--Вся шапка-->
+            <div class="header__container"> <!--Ограничитель для шапки-->
+                <a href="" class="header__logo"></a> <!--логотип-->
+                <div class="header__menu menu"> <!--Все меню-->
+                    <div class="menu__icon"> <!--- ЭТО БУДУЩИЙ НАШ БУРГЕР --->
+                        <span></span>
+                    </div>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li><a data-goto=".page__section_1" href="#" class="menu__link">Раздел №1</a></li>
+                            <li><a data-goto=".page__section_2" href="#" class="menu__link">Раздел №2</a></li>
+                            <li><a data-goto=".page__section_3" href="#" class="menu__link">Раздел №3</a></li>
+
+                            <li>
+                                <a href="" class="menu__link">Страница №1</a>
+                                <span class="menu__arrow"></span>
+                                <ul class="menu__sub-list">
+                                    <li>
+                                        <a href="" class="menu__sub-link">Раздел страницы №1</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="menu__sub-link">Раздел страницы №2</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="menu__sub-link">Раздел страницы №3</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="" class="menu__link">Страница №2</a>
+                            </li>  
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="page"> <!--Общий класс для всего контента-->
+            <section class="page__section page__section_1"> <!--класс для первой секции-->
+                <h1 class="page__title">Отличная статья</h1> <!--Класс для заголовков-->
+                    <div class="page__text"> <!--класс для текста-->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi illum, ratione id labore, architecto quod impedit fugit provident sed veritatis animi enim. Amet doloremque accusantium quidem, quae ex odio aliquid! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolor Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, doloribus. lum doloribus libero hic iste. Sit, enim!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt laudantium repellendus at rem nesciunt fugiat, neque accusamus nemo officiis obcaecati nulla maiores rerum ipsa vitae unde iusto ea? Quaerat, quasi dolor provident corporis earum voluptatibus nam incidunt expedita eligendi praesentium. Sit, enim!</p>
+                    </div>
+            </section>
+            <section class="page__section page__section_2">
+                <h2 class="page__sub-title">Отличный раздел сайта</h2>
+                    <div class="page__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                        <p>Lorem ipsum dolor sit amet, cons Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati odit accusamus nam impedit laborum in vero, voluptate fugit amet, consequatur ut dolorem, laboriosam consequuntur voluptates. Voluptas iure quos dolores sapiente? ectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                        <p>Lorem ipsum dolor sit  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt cumque libero expedita temporibus fuga consectetur error accusantium, explicabo voluptates molestiae. amet, consectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                        <p>Lorem i Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quod placeat vel dolor deleniti assumenda rem dicta? Perferendis quidem hic nam, exercitationem ullam assumenda deserunt repellat illum, soluta labore explicabo debitis laudantium mollitia doloribus animi pariatur porro molestiae doloremque, nihil vel quibusdam amet? Quo aperiam quasi illum a quam cupiditate. psum dolor sit amet, consectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                    </div>
+            </section>
+            <section class="page__section page__section_3">
+                <h2 class="page__sub-title">Отличный раздел сайта2</h2>
+                    <div class="page__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisici Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed amet recusandae earum ex quae sunt iure cum explicabo fugit, ab voluptate neque consequatur. ng elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                        <p>Lorem ips Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, aspernatur laborum eum et odit ducimus sint iste ad error, beatae voluptatum modi quidem? Minus laboriosam obcaecati, quod ullam veritatis molestiae facere molestias officiis. Optio velit earum iste ipsum quod, et fugiat recusandae delectus possimus autem, consectetur blanditiis quisquam repellendus. Consequatur in eaque necessitatibus provident at tempora totam saepe deleniti fugiat quisquam ducimus, beatae nihil cupiditate iusto sint? um dolor sit amet, consectetur adipisicing elit. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing el Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, iusto ducimus ad fugit velit dignissimos, iure fuga autem, optio aliquid ipsa deleniti. In delectus voluptate repudiandae esse earum alias tenetur eveniet, dolorum, doloribus, aliquam architecto! it. Mollitia possimus incidunt dolore unde dolorum doloribus libero hic iste. Sit, enim!</p>
+                    </div>
+            </section>
+
+        </main>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

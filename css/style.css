@@ -1,0 +1,307 @@
+/* Обнуление */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul, ol, li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+html, body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body._lock {
+    overflow: hidden;
+}
+.wrapper {
+    min-height: 100%;
+}
+
+/*ГЛАВНЫЙ КОНТЕНТ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.page {
+    padding: 90px 0 0 0; /* Отступ сверху */
+}
+.page__section {
+    padding: 30px; /* Отступы для КАЖДОЙ секции */
+    max-width: 1200px; /* Отступы по ширине */
+    margin: 0 auto;
+}
+.page__section_1 {
+    background-color:  #794f45;
+}
+.page__section_2 {
+    background-color:  #77608d; /* Задний фон дл блоков */
+}
+.page__section_3 {
+    background-color:  #7a956b;
+}
+.page__title {
+    font-size: 40px;
+    margin: 0 0 20px 0; /* Отступ вниз от заголовка */
+}
+.page__text {
+    font-size: 16px;
+    line-height: 150%; /* Отступы ячтобы текст не был приклюснут */
+}
+.page__text p {
+    margin: 0 0 20px 0; /* Отступы от каждого нового параграфа*/
+}
+.page__sub-title {
+    font-size: 30px;
+    margin: 0 0 20px 0;
+}
+
+ /* ---------------------------ШАПКА САЙТА------------------------------*/
+
+.header {
+    position: fixed;  /*Фиксация шапки*/
+    top: 0;
+    left: 0;
+    width: 100%; /*Делаем ее на всю ширину сайта*/
+    z-index: 10; 
+    background-color: #912105;
+
+}
+.header__container {
+    max-width: 1200px;  /*Делаем для контента внутри ширину*/
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between; /*Разоеденяем контент*/
+    align-items: center; /*Выравнивания контента по центру*/
+    min-height: 70px; /*высота шапки*/
+    padding: 0 30px; /*отступ от границ*/
+}
+.header__logo {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 50%;
+    z-index: 5;
+}
+.header__menu {
+}
+.menu {
+}
+.menu__icon {
+    display: none;
+}
+.menu__body {
+}
+.menu__list {
+}
+.menu__list > li {
+    position: relative; /*Для дальшего меню*/
+    margin: 0 0 0 20px;
+
+}
+.menu__link {
+    color: white;
+    font-size: 18px;
+}
+.menu__link:hover { /*подчеркивание ссылки*/
+    text-decoration: underline;
+}
+.menu__sub-list {
+    position: absolute; /*Выравнивание к родителю*/
+    top: 100%; /*больше отступ сверху */
+    right: 0;
+    background-color: black;
+    padding: 15px; /*оттупы для меню по бокам */
+    min-width: 200px; /*ширина мен.*/
+}
+.menu__sub-list li {
+    margin: 0 0 10px 0; /* отступ от каждой колонки*/
+}
+.menu__sub-list li:last-child{
+    margin: 0; /*убириаем отступ у последней колонки, чтобы было все равномерно */
+}
+
+.menu__sub-link {
+    color: white;
+}
+.menu__sub-link:hover {
+    text-decoration: underline;  /*подчеркивание ссылки*/
+}
+.menu__arrow {
+    display: none;
+}
+/* --------------------touch and pc------------------------------ */
+
+body._pc .menu__list > li:hover .menu__sub-list { /*обращаюсь к _pc, при наведении к меню буду давать новые свойста sub-list*/
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 0px); /* Появление sub-list!*/
+    pointer-events: all;
+}
+
+body._touch .menu__list > li {
+    display: flex;
+    align-items: center;
+}
+
+body._touch .menu__link {
+    flex: 1 1 auto;
+}
+
+body._touch .menu__arrow {  /*Создание стрелочки */
+    display: block;
+    width: 0;
+    height: 0;
+    transition: transform 0.3s ease 0s; 
+    margin: 0 0 0 5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #fff;
+}
+
+body._touch .menu__list > li._active .menu__sub-list { /*обращаюсь к тач, при наведении к меню буду давать новые свойста sub-list*/
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 0px);
+    pointer-events: all;
+}
+
+body._touch .menu__list > li._active .menu__arrow { /*Поворачиваем стрелочку при нажатии то есть при появлении класса active*/
+    transform: rotate(-180deg);
+}
+
+/* -----------------MEDIA--------------------------------- */
+
+@media (min-width: 767px) { /*для всех устройств где экран БОЛЬШЕ 767px*/
+    .menu__list {
+        display: flex; /*список чтобы шел вправо*/
+        align-items: center; 
+    }
+    .menu__list > li { /*обрашение к наружным li, так у нас есть li внутри класс (менюшка)*/
+        padding: 10px 0; 
+    }
+    .menu__sub-list {
+        transform: translate(0px, 10%); /*перемещение вниз*/
+        transition: all 0.3s ease 0s; /*анимация*/
+        pointer-events: none; /*нельзя взаимодействоать*/
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu__icon {
+        z-index: 5;
+        display: block; /*Вернуть обратно block потому что мы сделали его none*/
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    } 
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after {
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s; /*РИСУЕМ БУРГЕР*/
+        background-color: white;
+    }
+    .menu__icon::before,
+    .menu__icon::after { /*РИСУЕМ БУРГЕР*/
+        content: "";
+    }
+
+    .menu__icon::before { /*РИСУЕМ БУРГЕР*/
+        top: 0;
+    }
+    .menu__icon::after { /*РИСУЕМ БУРГЕР*/
+        bottom: 0;
+    }
+    .menu__icon span { /*РИСУЕМ БУРГЕР*/
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    .menu__icon._active span {
+        transform: scale(0) translate(0px, -50%);  /*Из бургера в крест */
+    }
+    .menu__icon._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%); /*Из бургера в крест */
+    }
+    .menu__icon._active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%); /*Из бургера в крест */
+    }
+    .menu__body { /*добавляем стили для красивого мею*/
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 100px 30px 30px 30px;
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+    }
+    .menu__body._active {
+        left: 0;
+    }
+
+    .menu__body::before { /*Добавляем снова прокладку для баннера*/
+        content: "";
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 70px;
+        background-color: #912105;
+        z-index: 2;
+    }
+
+    .menu__list > li {  
+        flex-wrap: wrap; /*Добалвяет перенос строк */
+        margin: 0 0 30px 0;
+    }
+    .menu__list li:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu__list > li._active .menu__sub-list { /*Если меню ативно то блок активируем*/
+        display: block;
+    }
+
+    .menu__link {
+        font-size: 24px;
+    }
+    .menu__sub-list {
+        position: relative;
+        background-color: white;
+        flex: 1 1 100%;
+        margin: 20px 0 0 0;
+        display: none;
+    }
+    .menu__sub-link {
+        font-size: 20px;
+        color: black;
+
+    }
+}
