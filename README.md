@@ -7,9 +7,10 @@
 
 <h3>Скриншот</h3>
 
-<img src="https://user-images.githubusercontent.com/107222527/188510379-95674dbc-9ef5-4aea-a567-1b1bc351be89.png" width=''>
-<img src="https://user-images.githubusercontent.com/107222527/188510384-362341d8-6946-4e3e-a710-26c35cf2fc52.png" width=''>
-<img src="https://user-images.githubusercontent.com/107222527/188510387-159f4fde-1a07-4c31-8859-d14c8a9545f9.png" width=''>
+<div style='display: flex;' ></div>
+<img style='display: flex;' src="https://user-images.githubusercontent.com/107222527/188510379-95674dbc-9ef5-4aea-a567-1b1bc351be89.png" width=''>
+<img style='display: flex;' src="https://user-images.githubusercontent.com/107222527/188510384-362341d8-6946-4e3e-a710-26c35cf2fc52.png" width=''>
+<img style='display: flex;' src="https://user-images.githubusercontent.com/107222527/188510387-159f4fde-1a07-4c31-8859-d14c8a9545f9.png" width=''>
 <hr>
 
 <h3>Запуск</h3>
