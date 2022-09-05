@@ -1,15 +1,15 @@
-<h1 align="center">Flaskblog - Сайт блог</h1>
+<h1 align="center">Готовый код меню-бургера и слайдера на HTML/CSS/JS. По туториалу</h1>
 <h3>Введение в проект</h3>
 <hr>
-<p>Блог на flask. Каждая строка кода расписана. Может сильно помочь для изучения flask. В проекте зарегестрированные пользователи могут создавать посты, изменять, удалять их. Другие могут смотреть их. Сделана страница профиля, где можно поставить аватарку, поменять информацию о себе.</p>
+<p>Сделан полный адаптив у слайдера touch скрин. Полный адаптив страницы и меню бургер, написанный на полном Js. Каждая строка в коде подробна расписана!</p>
 
 <hr>
 
 <h3>Скриншот</h3>
 
-<img src="https://user-images.githubusercontent.com/107222527/188509474-c44a7e98-c51f-45b1-bb62-f41faaa7eae3.png" width=''>
-<img src="https://user-images.githubusercontent.com/107222527/188509476-94510abb-4cd4-4cf3-8f3c-7f380c438b81.png" width=''>
-
+<img src="https://user-images.githubusercontent.com/107222527/188510379-95674dbc-9ef5-4aea-a567-1b1bc351be89.png" width=''>
+<img src="https://user-images.githubusercontent.com/107222527/188510384-362341d8-6946-4e3e-a710-26c35cf2fc52.png" width=''>
+<img src="https://user-images.githubusercontent.com/107222527/188510387-159f4fde-1a07-4c31-8859-d14c8a9545f9.png" width=''>
 <hr>
 
 <h3>Запуск</h3>
